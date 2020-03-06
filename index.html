@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo-text">
+            <img src="images/logo.svg" alt="">
+            <p>Front-end Developer Test Task</p>
+        </div>
+        <div class="cart-logo">
+            <span class="cart-text"> cart</span>
+            <div class="cart-icon">
+                <img src="images/cart.svg" alt="">
+                <span class="cart-number">3</span>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="general-order">
+    <div class="order-forms">
+        <div class="order-steps">
+            <div class="header">
+                <nav>
+                    <ul>
+                        <li class="step-title">
+                            Shipping
+                        </li>
+                        <li class="step-title">
+                            Billing
+                        </li>
+                        <li class="step-title">
+                            Payment
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <form class="form-container">
+                <div class="shipping-info">
+                    <h3 class="title">Shipping Info</h3>
+                    <div>
+                        <div class="recipient">
+                            <p class="small-title">Recipient</p>
+                            <div class="input-container">
+                                <input type="text" name="name" placeholder="Full Name" class="input-field">
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="multiple-row">
+                                <div class="input-container">
+                                    <input type="text" name="phone" placeholder="Daytime Phone"
+                                           class=" input-field input-phone">
+                                    <p class="warning-message"></p>
+                                </div>
+
+                                <span class="number-text"> For delivery questions only</span>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <p class="small-title">Address</p>
+                            <div class="input-container">
+                                <input type="text" name="address" placeholder="Street Address" class="input-field">
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="address-additional"
+                                       placeholder="Apt, Suite, Bldg, Gate Code. (optional)"
+                                       class="input-field">
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="city" class="input-field" title="city">
+                                <span class="geolocation-icon">
+                                <img src="images/geolocation.svg" alt="">
+                         </span>
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="multiple-row">
+                                <div class="input-container">
+                                    <select class="country-input" name="country" title="country">
+                                        <option disabled selected>Country</option>
+                                    </select>
+                                    <p class="warning-message"></p>
+                                </div>
+                                <div class="input-container">
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field zip">
+                                    <p class="warning-message"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <button class="btn" type="button">Continue</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="billing-info"></div>
+                <div class="payment-info"></div>
+            </form>
+
+        </div>
+        <div class="thanks-message"></div>
+
+
+    </div>
+    <div class="order-summary"></div>
+</div>
+</body>
+</html>
