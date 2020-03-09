@@ -16,7 +16,9 @@
             <span class="cart-text"> cart</span>
             <div class="cart-icon">
                 <img src="images/cart.svg" alt="">
+                <div class="cart-number-container">
                 <span class="cart-number">3</span>
+            </div>
             </div>
         </div>
     </div>
@@ -47,13 +49,13 @@
                         <div class="recipient">
                             <p class="small-title">Recipient</p>
                             <div class="input-container">
-                                <input type="text" name="name" placeholder="Full Name" class="input-field">
+                                <input type="text" name="name" placeholder="Full Name" class="input-field" title="name">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="multiple-row">
                                 <div class="input-container">
                                     <input type="text" name="phone" placeholder="Daytime Phone"
-                                           class=" input-field input-phone">
+                                           class=" input-field input-phone" title="phone">
                                     <p class="warning-message"></p>
                                 </div>
 
@@ -63,15 +65,15 @@
                         <div class="address">
                             <p class="small-title">Address</p>
                             <div class="input-container">
-                                <input type="text" name="address" placeholder="Street Address" class="input-field">
+                                <input type="text" name="address" placeholder="Street Address" class="input-field" title="address">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="input-container">
                                 <input type="text" name="address-additional"
                                        placeholder="Apt, Suite, Bldg, Gate Code. (optional)"
-                                       class="input-field">
+                                       class="input-field" title="address-additional">
                             </div>
-                            <div class="input-container">
+                            <div class="input-container geolocation">
                                 <input type="text" name="city" class="input-field" title="city">
                                 <span class="geolocation-icon">
                                 <img src="images/geolocation.svg" alt="">
@@ -85,8 +87,8 @@
                                     </select>
                                     <p class="warning-message"></p>
                                 </div>
-                                <div class="input-container">
-                                    <input type="text" name="zip" placeholder="ZIP" class="input-field zip">
+                                <div class="input-container zip ">
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field zip" title="zip">
                                     <p class="warning-message"></p>
                                 </div>
                             </div>
