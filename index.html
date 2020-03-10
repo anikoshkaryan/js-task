@@ -17,8 +17,8 @@
             <div class="cart-icon">
                 <img src="images/cart.svg" alt="">
                 <div class="cart-number-container">
-                <span class="cart-number">3</span>
-            </div>
+                    <span class="cart-number">3</span>
+                </div>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
                 </nav>
             </div>
             <form class="form-container">
-                <div class="shipping-info">
+                <div class="shipping-info ">
                     <h3 class="title">Shipping Info</h3>
                     <div>
                         <div class="recipient">
@@ -65,7 +65,8 @@
                         <div class="address">
                             <p class="small-title">Address</p>
                             <div class="input-container">
-                                <input type="text" name="address" placeholder="Street Address" class="input-field" title="address">
+                                <input type="text" name="address" placeholder="Street Address" class="input-field"
+                                       title="address">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="input-container">
@@ -87,8 +88,9 @@
                                     </select>
                                     <p class="warning-message"></p>
                                 </div>
-                                <div class="input-container zip ">
-                                    <input type="text" name="zip" placeholder="ZIP" class="input-field zip" title="zip">
+                                <div class="input-container zip-container">
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip"
+                                           title="zip">
                                     <p class="warning-message"></p>
                                 </div>
                             </div>
@@ -99,16 +101,185 @@
                         </div>
                     </div>
                 </div>
-                <div class="billing-info"></div>
-                <div class="payment-info"></div>
+                <div class="billing-info hidden ">
+                    <div class="title-container">
+                        <h3 class="big-title">Billing Information</h3>
+                        <span class="title-child">Same as shipping</span>
+                    </div>
+                    <div>
+                        <div class="billing-contact">
+                            <p class="small-title">Billing Contact</p>
+                            <div class="input-container">
+                                <input type="text" placeholder="Full Name" title="name" class="input-field" name="name">
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" placeholder="Email Address" title="email-address" class="input-field"
+                                       name="email-address">
+                                <p class="warning-message"></p>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <p class="small-title">Billing Address</p>
+                            <div class="input-container">
+                                <input type="text" name="address" placeholder="Street Address" class="input-field"
+                                       title="address">
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="address-additional"
+                                       placeholder="Apt, Suite, Bldg, Gate Code. (optional)"
+                                       class="input-field" title="address-additional">
+                            </div>
+                            <div class="input-container geolocation">
+                                <input type="text" name="city" class="input-field" title="city" placeholder="City">
+                                <span class="geolocation-icon">
+                                <img src="images/geolocation.svg" alt="">
+                         </span>
+                                <p class="warning-message"></p>
+                            </div>
+                            <div class="multiple-row">
+                                <div class="input-container">
+                                    <select class="country-input" name="country" title="country">
+                                        <option disabled selected>Country</option>
+                                    </select>
+                                    <p class="warning-message"></p>
+                                </div>
+                                <div class="input-container zip-container">
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip"
+                                           title="zip">
+                                    <p class="warning-message"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div>
+                            <button class="btn" type="button">Continue</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-info hidden ">
+                    <h3 class="title">Payment</h3>
+                    <div class="payment-security">
+                       <span class="secure-logo">
+                           <img src="images/payment-security.svg" alt="">
+                       </span>
+                        <p class="secure-text">This is a secure 128-bit SSL encrypted payment</p>
+                    </div>
+                    <div>
+                        <div class="cardholder">
+                            <p class="small-title">Cardholder Name</p>
+                            <div class="input-container">
+                                <input type="text" name="cardholder-name" title="cardholder-name" class="input-field"
+                                       placeholder="Name as it appears on your card">
+                                <p class="warning-message"></p>
+                            </div>
+                        </div>
+                        <div class="card-number">
+                            <p class="small-title">Card Number</p>
+                            <div class="input-container">
+                                <input type="number" name="card-number" title="card-number" class="input-field"
+                                       placeholder="XXXX XXXX XXXX XXXX XXXX">
+                                <p class="warning-message"></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="date-security-code">
+                                <div class="expire-date">
+                                    <span class="codeDate-title">Expire Date</span>
+                                    <input type="date" class="date" name="date" title="date">
+                                </div>
+                                <div class="security-code">
+                                    <span class="codeDate-title">Security Code</span>
+                                    <input type="text" class="code" title="code" name="code">
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn" type="button">Pay Securely</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
-
         </div>
-        <div class="thanks-message"></div>
-
+        <div class="thanks-message hidden">
+            <div class="main-message">Thank you for your order!</div>
+            <div>
+                <p class="order-number">Order number is:188787788</p>
+                <p class="email-explanation">You will receive an email confirmation shortly to <span class="email">jonathan.smith@gmail.com </span>
+                </p>
+            </div>
+            <div class="delivery">
+                <span class="delivery-day">Estimated delivery Day is</span>
+                <span class="delivery-date">Friday 1st April 2016</span>
+            </div>
+            <div>
+                <span class="recipe">Print Recipe</span>
+            </div>
+        </div>
+    </div>
+    <div class="order-summary">
+        <div class="order-titles">
+            <p class="order-titles-big">Order Summary</p>
+            <span class="order-titles-small">edit order</span>
+        </div>
+        <div>
+            <div class="order-things-container">
+                <div class="things-image">
+                    <img src="images/order-boots.svg" alt="">
+                </div>
+                <div class="things-description desc" >
+                    <span class="gray">The Chelsea Boot</span>
+                    <span>Black</span>
+                    <span>Quantity: 1</span>
+                </div>
+                <div class="things-price"><span>$235</span></div>
+            </div>
+            <div class="gray-line"></div>
+            <div class="order-things-container">
+                <div class="things-image">
+                    <img src="images/order-bag.svg" alt="">
+                </div>
+                <div class="things-description">
+                    <span class="gray">The Twill Snap Backpack</span>
+                    <span>Reverse Denim + Brown leather</span>
+                    <span>Quantity: 1</span>
+                </div>
+                <div class="things-price"><span>$65</span></div>
+            </div>
+            <div class="gray-line"></div>
+            <div class="order-things-container">
+                <div class="things-image">
+                    <img src="images/bag.svg" alt="">
+                </div>
+                <div class="things-description">
+                    <span class="gray">The Twill Zip Tote</span>
+                    <span>Reverse Denim + Black leather</span>
+                    <span>Quantity: 1</span>
+                </div>
+                <div class="things-price"><span>$48</span></div>
+            </div>
+            <div class="gray-line"></div>
+            <div class="order-things-container taxes">
+                <div class="subtotal-taxes">
+                    <span>Subtotal</span>
+                    <span>Shipping</span>
+                    <span>Taxes</span>
+                </div>
+                <div class="prices">
+                    <span>$398</span>
+                    <span>Free</span>
+                    <span>$12.12</span>
+                </div>
+            </div>
+            <div class="gray-line"></div>
+        </div>
+        <div class="totals">
+            <span class="totals-title">Total</span>
+            <span class="totals-price">$410.12</span>
+        </div>
 
     </div>
-    <div class="order-summary"></div>
 </div>
 </body>
 </html>
