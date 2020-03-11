@@ -10,6 +10,29 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeueMedium.eot');
+    src: url('fonts/HelveticaNeueMedium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HelveticaNeueMedium.woff2') format('woff2'),
+    url('fonts/HelveticaNeueMedium.woff') format('woff'),
+    url('fonts/HelveticaNeueMedium.ttf') format('truetype'),
+    url('fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeueBold.eot');
+    src: url('fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HelveticaNeueBold.woff2') format('woff2'),
+    url('fonts/HelveticaNeueBold.woff') format('woff'),
+    url('fonts/HelveticaNeueBold.ttf') format('truetype'),
+    url('fonts/HelveticaNeueBold.svg#HelveticaNeueBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 body {
     background: #F2F2F2;
@@ -454,66 +477,77 @@ header:after {
     line-height: 14px;
     color: #979797;
 }
-.order-titles-small:after{
+
+.order-titles-small:after {
     content: "";
     width: 100%;
     height: 1px;
     opacity: 0.5;
-    background:  #6B6B6B;
+    background: #6B6B6B;
     display: block;
 }
-.order-things-container{
+
+.order-things-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 10px;
 }
-.gray{
+
+.gray {
     font-size: 12px;
     line-height: 20px;
     color: #777879;
 }
-.things-description{
+
+.things-description {
     font-size: 10px;
     line-height: 12px;
     color: #2B2525;
     flex-grow: 1;
     margin: 0 10px;
 }
-.desc{
+
+.desc {
     margin-right: 45px;
 }
-.order-things-container span{
+
+.order-things-container span {
     display: block;
 }
-.taxes{
+
+.taxes {
     line-height: 20px;
     margin: 0 10px;
 }
 
-.subtotal-taxes{
+.subtotal-taxes {
     font-size: 12px;
     color: #777879;
 
 }
-.prices{
+
+.prices {
     font-size: 12px;
     text-align: right;
     color: #777879;
 }
-.totals{
-  display: flex;
+
+.totals {
+    display: flex;
     justify-content: space-between;
-   margin: 20px 10px;
+    margin: 20px 10px;
     font-size: 12px;
     color: #431C5D;
     font-weight: bold;
 }
-.gray-line{
+
+.gray-line {
     margin-bottom: 20px;
     width: 100%;
     height: 2px;
     opacity: 0.2;
     background: #979797;
 }
+
 /*order-summary end*/
