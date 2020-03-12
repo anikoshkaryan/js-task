@@ -18,7 +18,7 @@
     url('fonts/HelveticaNeueMedium.woff') format('woff'),
     url('fonts/HelveticaNeueMedium.ttf') format('truetype'),
     url('fonts/HelveticaNeueMedium.svg#HelveticaNeueMedium') format('svg');
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -30,7 +30,7 @@
     url('fonts/HelveticaNeueBold.woff') format('woff'),
     url('fonts/HelveticaNeueBold.ttf') format('truetype'),
     url('fonts/HelveticaNeueBold.svg#HelveticaNeueBold') format('svg');
-    font-weight: bold;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -42,6 +42,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
 }
 
 .hidden {
@@ -143,7 +144,7 @@ header:after {
 .order-forms {
     background: linear-gradient(180deg, #FFFFFF 0%, #FEFEFE 100%);
     min-width: 400px;
-    min-height: 400px;
+    min-height: 650px;
     padding: 20px 40px 45px;
     box-sizing: border-box;
 
@@ -191,12 +192,24 @@ header:after {
 /*main header end*/
 
 /*main form-container */
+.form-container {
+    position: relative;
+}
+
+.form-container > div {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 /*shipping info*/
 .title {
     font-size: 26px;
     color: #5A1094;
     margin-bottom: 20px;
     line-height: 31px;
+    font-weight: 600;
 
 }
 
@@ -270,8 +283,8 @@ header:after {
     border: 1px solid rgba(67, 28, 93, 0.8);
     box-sizing: border-box;
     border-radius: 5px;
-    max-width: 180px;
-    width: 43%;
+    max-width: 200px;
+    width: 45%;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
@@ -298,7 +311,7 @@ header:after {
 /*billing-info*/
 
 .title-container {
-    width: 100%;
+   width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -306,7 +319,7 @@ header:after {
 }
 
 .big-title {
-    font-size: 26px;
+    font-size: 22px;
     color: #5A1094;
 }
 
@@ -315,6 +328,7 @@ header:after {
     line-height: 14px;
     color: #5A1094;
     font-weight: bold;
+
 }
 
 .title-child:after {
@@ -334,10 +348,11 @@ header:after {
     justify-content: space-between;
     margin-bottom: 20px;
     width: 300px;
+    align-items: center;
 }
 
 .secure-text {
-    font-size: 15px;
+    font-size: 12px;
     line-height: 18px;
     color: #6B6B6B;
 }
@@ -395,13 +410,14 @@ header:after {
     line-height: 31px;
     color: #5A1094;
     margin: 30px 0;
+    font-weight: 600;
 }
 
 .order-number {
     font-size: 16px;
     line-height: 19px;
     color: #2B2525;
-    font-weight: bold;
+    font-weight: 600;
     margin: 10px 0;
 }
 
@@ -424,7 +440,7 @@ header:after {
 }
 
 .delivery-date {
-    font-weight: bold;
+    font-weight: 600;
     display: block;
 
 }
@@ -435,7 +451,7 @@ header:after {
     color: #5A1094;
     margin-top: 30px;
     display: inline-block;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .recipe:after {
@@ -456,6 +472,8 @@ header:after {
     min-width: 300px;
     background: #E6E9F0;
     opacity: 1;
+    padding: 25px 12px;
+    box-sizing: border-box;
 }
 
 .order-titles {
@@ -469,7 +487,7 @@ header:after {
     font-size: 16px;
     line-height: 18px;
     color: #5A1094;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .order-titles-small {
@@ -490,8 +508,7 @@ header:after {
 .order-things-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 20px 10px;
+    margin: 20px 0;
 }
 
 .gray {
@@ -508,6 +525,29 @@ header:after {
     margin: 0 10px;
 }
 
+.things-image {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3F3F3;
+    border: 1px solid #E3E3E3;
+    border-radius: 1px;
+}
+
+.things-image img {
+    width: 90%;
+    height: 90%;
+}
+
+.things-price {
+    font-size: 12px;
+    line-height: 11px;
+    color: #777879;
+}
+
 .desc {
     margin-right: 45px;
 }
@@ -517,31 +557,37 @@ header:after {
 }
 
 .taxes {
+    margin: 20px 0;
+    font-size: 12px;
     line-height: 20px;
-    margin: 0 10px;
-}
-
-.subtotal-taxes {
-    font-size: 12px;
     color: #777879;
 
 }
 
-.prices {
-    font-size: 12px;
-    text-align: right;
-    color: #777879;
+.subtotal {
+    display: flex;
+    justify-content: space-between;
 }
 
+.shipping{
+    display: flex;
+    justify-content: space-between;
+}
+
+.taxes2{
+    display: flex;
+    justify-content: space-between;
+}
 .totals {
     display: flex;
     justify-content: space-between;
     margin: 20px 10px;
     font-size: 12px;
     color: #431C5D;
-    font-weight: bold;
 }
-
+.totals span{
+    font-weight: 600;
+}
 .gray-line {
     margin-bottom: 20px;
     width: 100%;
