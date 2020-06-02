@@ -177,6 +177,7 @@ header:after {
 .warning-message {
     opacity: 0;
     visibility: hidden;
+    color: red;
 }
 
 .step-title:not(:last-child):after {
@@ -291,6 +292,7 @@ header:after {
     color: #FFFFFF;
     padding: 12px 14px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .geolocation {
@@ -311,7 +313,7 @@ header:after {
 /*billing-info*/
 
 .title-container {
-   width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -569,15 +571,16 @@ header:after {
     justify-content: space-between;
 }
 
-.shipping{
+.shipping {
     display: flex;
     justify-content: space-between;
 }
 
-.taxes2{
+.taxes2 {
     display: flex;
     justify-content: space-between;
 }
+
 .totals {
     display: flex;
     justify-content: space-between;
@@ -585,9 +588,11 @@ header:after {
     font-size: 12px;
     color: #431C5D;
 }
-.totals span{
+
+.totals span {
     font-weight: 600;
 }
+
 .gray-line {
     margin-bottom: 20px;
     width: 100%;
@@ -597,3 +602,13 @@ header:after {
 }
 
 /*order-summary end*/
+
+/* functional-part*/
+.input-field.invalid {
+    background-color: #fefdef;
+}
+.warning-message.show{
+    opacity: 1;
+    visibility: visible;
+}
+/* functional-part-end*/

@@ -30,22 +30,22 @@
             <div class="header">
                 <nav>
                     <ul>
-                        <li class="step-title">
+                        <li class="step-title" data-form = "shipping-info">
                             Shipping
                         </li>
-                        <li class="step-title">
+                        <li class="step-title" data-form="billing-info">
                             Billing
                         </li>
-                        <li class="step-title">
+                        <li class="step-title" data-form="payment-info">
                             Payment
                         </li>
                     </ul>
                 </nav>
             </div>
             <form class="form-container">
-                <div class="shipping-info hidden">
+                <div class="shipping-info ">
                     <h3 class="title">Shipping Info</h3>
-                    <div>
+                    <div class="main-content">
                         <div class="recipient">
                             <p class="small-title">Recipient</p>
                             <div class="input-container">
@@ -106,7 +106,7 @@
                         <h3 class="big-title">Billing Information</h3>
                         <span class="title-child">Same as shipping</span>
                     </div>
-                    <div>
+                    <div class="main-content">
                         <div class="billing-contact">
                             <p class="small-title">Billing Contact</p>
                             <div class="input-container">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="payment-info  ">
+                <div class="payment-info hidden ">
                     <h3 class="title">Payment</h3>
                     <div class="payment-security">
                        <span class="secure-logo">
@@ -166,7 +166,7 @@
                        </span>
                         <p class="secure-text">This is a secure 128-bit SSL encrypted payment</p>
                     </div>
-                    <div>
+                    <div class="main-content">
                         <div class="cardholder">
                             <p class="small-title">Cardholder Name</p>
                             <div class="input-container">
@@ -283,5 +283,14 @@
 
     </div>
 </div>
+<script src="jquery-3.5.1.min.js">
+
+
+</script>
+<script src="script.js">
+
+
+</script>
+
 </body>
 </html>
