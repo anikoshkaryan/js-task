@@ -178,8 +178,17 @@ header:after {
     opacity: 0;
     visibility: hidden;
     color: red;
+    position: absolute;
+    top: -25px;
+    left: 5px;
+    border: 2px solid gainsboro;
+    width: 200px;
+    padding: 10px;
+    background: white;
+    border-radius: 2px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
 }
-
 .step-title:not(:last-child):after {
     content: "";
     background: url("images/arrow.png");
@@ -607,8 +616,14 @@ header:after {
 .input-field.invalid {
     background-color: #fefdef;
 }
+.input-field:not(.invalid){
+    background: white;
+}
 .warning-message.show{
     opacity: 1;
     visibility: visible;
+}
+.main-content{
+    position: relative;
 }
 /* functional-part-end*/

@@ -1,4 +1,4 @@
-/* order-steps function*/
+/* order-stezps function*/
 $(document).ready(function () {
     $(".step-title").click(function () {
         let form = $(this).attr("data-form");
@@ -11,7 +11,6 @@ $(document).ready(function () {
         $(inputs).each(function () {
             if ($(this).val().length === 0) {
                 $(this).addClass("invalid");
-
             }
 
         });
@@ -19,6 +18,7 @@ $(document).ready(function () {
         let message = $(".invalid").eq(0).closest(".input-container").find(".warning-message");
         $(message).text("Please fill out this field");
         $(message).addClass("show");
+
 
     });
 });
