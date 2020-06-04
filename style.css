@@ -179,15 +179,32 @@ header:after {
     visibility: hidden;
     color: red;
     position: absolute;
-    top: -25px;
-    left: 5px;
-    border: 2px solid gainsboro;
-    width: 200px;
+    top: -44px;
+    left: 0;
+    /* width: 199px; */
     padding: 10px;
     background: white;
-    border-radius: 2px;
-    border-bottom-right-radius: 40px;
-    border-top-left-radius: 40px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(222, 220, 220, 0.695907);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.warning-message:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid #ffffff;
+    border-left: transparent 9px solid;
+    border-right: transparent 9px solid;
+    border-bottom: 9px solid transparent;
+    display: block;
+    position: absolute;
+    bottom: -19px;
+    /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); */
 }
 .step-title:not(:last-child):after {
     content: "";
@@ -265,14 +282,13 @@ header:after {
 
 .multiple-row .input-container select {
     width: 100%;
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
     border: 1px solid #DEDCDC;
     box-sizing: border-box;
     border-radius: 5px;
     padding: 11px;
     -webkit-appearance: none;
-    background: url("images/country-path.svg") no-repeat top 20px right 10px;
-
+    background: url("images/country-path.svg") no-repeat top 20px right 10px, #FFF;
 }
 
 .address {
@@ -613,17 +629,15 @@ header:after {
 /*order-summary end*/
 
 /* functional-part*/
-.input-field.invalid {
+.input-field.invalid, .country-input.input-field.invalid {
     background-color: #fefdef;
 }
-.input-field:not(.invalid){
-    background: white;
-}
+
 .warning-message.show{
     opacity: 1;
     visibility: visible;
 }
-.main-content{
+.input-container{
     position: relative;
 }
 /* functional-part-end*/
