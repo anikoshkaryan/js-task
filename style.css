@@ -86,7 +86,7 @@ header:after {
 }
 
 .logo-text p {
-    color: #5A1094;;
+    color: #5A1094;
     margin-left: 10px;
 }
 
@@ -169,7 +169,6 @@ header:after {
     line-height: 14px;
     color: #979797;
     opacity: 0.8;
-    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -355,6 +354,7 @@ header:after {
     line-height: 14px;
     color: #5A1094;
     font-weight: bold;
+    cursor: pointer;
 
 }
 
@@ -639,5 +639,8 @@ header:after {
 }
 .input-container{
     position: relative;
+}
+.active{
+    color: #5A1094;
 }
 /* functional-part-end*/

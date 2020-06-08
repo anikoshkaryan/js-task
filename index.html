@@ -30,7 +30,7 @@
             <div class="header">
                 <nav>
                     <ul>
-                        <li class="step-title" data-form = "shipping-info">
+                        <li class="step-title active" data-form = "shipping-info">
                             Shipping
                         </li>
                         <li class="step-title" data-form="billing-info">
@@ -43,13 +43,13 @@
                 </nav>
             </div>
             <form class="form-container">
-                <div class="shipping-info ">
+                <div data-next= "billing-info" class="shipping-info ">
                     <h3 class="title">Shipping Info</h3>
                     <div class="main-content">
                         <div class="recipient">
                             <p class="small-title">Recipient</p>
                             <div class="input-container">
-                                <input type="text" name="name" placeholder="Full Name" class="input-field" title="name">
+                                <input type="text" name="name" placeholder="Full Name" class="input-field copy" title="name">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="multiple-row">
@@ -65,17 +65,17 @@
                         <div class="address">
                             <p class="small-title">Address</p>
                             <div class="input-container">
-                                <input type="text" name="address" placeholder="Street Address" class="input-field"
+                                <input type="text" name="address" placeholder="Street Address" class="input-field copy"
                                        title="address">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="input-container">
                                 <input type="text" name="address-additional"
                                        placeholder="Apt, Suite, Bldg, Gate Code. (optional)"
-                                       class="input-field optional" title="address-additional">
+                                       class="input-field optional copy" title="address-additional">
                             </div>
                             <div class="input-container geolocation">
-                                <input type="text" name="city" class="input-field" title="city">
+                                <input type="text" name="city" class="input-field copy" title="city">
                                 <span class="geolocation-icon">
                                 <img src="images/geolocation.svg" alt="">
                          </span>
@@ -83,13 +83,13 @@
                             </div>
                             <div class="multiple-row">
                                 <div class="input-container">
-                                    <select class="country-input input-field" name="country" title="country">
+                                    <select class="country-input input-field copy" name="country" title="country">
                                         <option selected value="">Country</option>
                                     </select>
                                     <p class="warning-message"></p>
                                 </div>
                                 <div class="input-container zip-container">
-                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip"
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip copy"
                                            title="zip">
                                     <p class="warning-message"></p>
                                 </div>
@@ -101,16 +101,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="billing-info hidden ">
+                <div data-next = "payment-info" class="billing-info hidden ">
                     <div class="title-container">
                         <h3 class="big-title">Billing Information</h3>
-                        <span class="title-child">Same as shipping</span>
+                        <span class="title-child same-as-shipping">Same as shipping</span>
                     </div>
                     <div class="main-content">
                         <div class="billing-contact">
                             <p class="small-title">Billing Contact</p>
                             <div class="input-container">
-                                <input type="text" placeholder="Full Name" title="name" class="input-field" name="name">
+                                <input type="text" placeholder="Full Name" title="name" class="input-field paste" name="name">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="input-container">
@@ -122,17 +122,17 @@
                         <div class="address">
                             <p class="small-title">Billing Address</p>
                             <div class="input-container">
-                                <input type="text" name="address" placeholder="Street Address" class="input-field"
+                                <input type="text" name="address" placeholder="Street Address" class="input-field paste"
                                        title="address">
                                 <p class="warning-message"></p>
                             </div>
                             <div class="input-container">
                                 <input type="text" name="address-additional"
                                        placeholder="Apt, Suite, Bldg, Gate Code. (optional)"
-                                       class="input-field optional" title="address-additional">
+                                       class="input-field optional paste" title="address-additional">
                             </div>
                             <div class="input-container geolocation">
-                                <input type="text" name="city" class="input-field" title="city" placeholder="City">
+                                <input type="text" name="city" class="input-field paste" title="city" placeholder="City">
                                 <span class="geolocation-icon">
                                 <img src="images/geolocation.svg" alt="">
                          </span>
@@ -140,13 +140,13 @@
                             </div>
                             <div class="multiple-row">
                                 <div class="input-container">
-                                    <select class="country-input" name="country" title="country">
+                                    <select class="country-input paste" name="country" title="country">
                                         <option disabled selected>Country</option>
                                     </select>
                                     <p class="warning-message"></p>
                                 </div>
                                 <div class="input-container zip-container">
-                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip"
+                                    <input type="text" name="zip" placeholder="ZIP" class="input-field input-zip paste"
                                            title="zip">
                                     <p class="warning-message"></p>
                                 </div>
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="payment-info hidden ">
+                <div data-next="thanks-message" class="payment-info hidden ">
                     <h3 class="title">Payment</h3>
                     <div class="payment-security">
                        <span class="secure-logo">
@@ -205,7 +205,7 @@
         <div class="thanks-message hidden">
             <div class="main-message">Thank you for your order!</div>
             <div>
-                <p class="order-number">Order number is:188787788</p>
+                <p class="order-number">Order number is: <span class="ordNum">188787788</span> </p>
                 <p class="email-explanation">You will receive an email confirmation shortly to <span class="email">jonathan.smith@gmail.com </span>
                 </p>
             </div>
