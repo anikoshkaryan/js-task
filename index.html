@@ -77,8 +77,8 @@
                             <div class="input-container geolocation">
                                 <input type="text" name="city" class="input-field copy" title="city">
                                 <span class="geolocation-icon">
-                                <img src="images/geolocation.svg" alt="">
-                         </span>
+                                    <img src="images/geolocation.svg" alt="">
+                                </span>
                                 <p class="warning-message"></p>
                             </div>
                             <div class="multiple-row">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-next="thanks-message" class="payment-info hidden ">
+                <div data-next="thanks-message" class="payment-info  hidden">
                     <h3 class="title">Payment</h3>
                     <div class="payment-security">
                        <span class="secure-logo">
@@ -180,18 +180,21 @@
                             <div class="input-container">
                                 <input type="text" name="card-number" title="card-number" class="input-field"
                                        placeholder="XXXX XXXX XXXX XXXX XXXX">
+                                <span class="card-icon"></span>
                                 <p class="warning-message"></p>
                             </div>
                         </div>
                         <div>
                             <div class="date-security-code">
-                                <div class="expire-date">
+                                <div class="expire-date input-container">
                                     <span class="codeDate-title">Expire Date</span>
                                     <input type="text" class="date input-field" name="date" title="date" placeholder="MM/YY">
+                                    <p class="warning-message"></p>
                                 </div>
-                                <div class="security-code">
+                                <div class="security-code input-container">
                                     <span class="codeDate-title">Security Code</span>
                                     <input type="text" class="code input-field" title="code" name="code">
+                                    <p class="warning-message"></p>
                                 </div>
                             </div>
                             <div>
@@ -212,9 +215,6 @@
             <div class="delivery">
                 <span class="delivery-day">Estimated delivery Day is</span>
                 <span class="delivery-date">Friday 1st April 2016</span>
-            </div>
-            <div>
-                <span class="recipe">Print Recipe</span>
             </div>
         </div>
     </div>

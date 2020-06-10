@@ -39,20 +39,26 @@ $(document).ready(function () {
 
 
     });
-    function thanksBlock (){
+
+    function thanksBlock() {
         $(".thanks-message .email").text($("[name='email-address']").val());
         let num = localStorage.getItem("orderNumber");
-        if (!num){
-            localStorage.setItem("orderNumber",188787788);
-        }else {
+        if (!num) {
+            localStorage.setItem("orderNumber", 188787788);
+        } else {
             localStorage.setItem("orderNumber", +num + 1);
         }
         $(".ordNum").text(localStorage.getItem("orderNumber"));
         let date = $(".delivery-date");
-        let now = new  Date();
+        let now = new Date();
         now.setMonth(now.getMonth() + 1);
-        date.text(now);
+        let weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let result = `${weekDays[now.getDay()]} ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+        $(date).text(result);
+        $(".order-summary").addClass("final");
     }
+
     $(".input-field").focus(function () {
         $(this).removeClass("invalid");
         $(this).closest(".input-container").find(".warning-message").removeClass("show");
@@ -96,7 +102,9 @@ $(document).ready(function () {
                 $(active).find("[name='city']").val(city);
                 $(active).find(`.country-input option[value='${country}']`).attr("selected", "true");
                 $(active).find(".country-input").removeClass("invalid");
+                $(active).find(".country-input").closest(".input-container").find(".warning-message").removeClass("show");
                 $(active).find("[name= 'city']").removeClass("invalid");
+                $(active).find("[name= 'city']").closest(".input-container").find(".warning-message").removeClass("show");
             }
         })
     }
@@ -122,9 +130,26 @@ $(document).ready(function () {
             });
             if (filtered.length > 0) {
                 filtered[0].value = copyInput.value;
+                $(filtered[0]).closest(".input-container").find(".warning-message").removeClass("show");
+                $(filtered[0]).removeClass("invalid");
             }
 
         });
+    });
+    $("[name='card-number']").on("input",function () {
+        let val = $(this).val();
+        let cardIcon = $(".card-icon");
+         switch (val[0]){
+             case "4":
+                 $(cardIcon).css("background-image","url('images/Visa_2014_logo_detail.svg.png')");
+                 break;
+             case "5":
+                 $(cardIcon).css("background-image","url('images/MasterCard_Logo.svg.png')");
+                 break;
+             case "3":
+                 $(cardIcon).css("background-image","url('images/amex_card.png')");
+                 break;
+         }
     })
 });
 
